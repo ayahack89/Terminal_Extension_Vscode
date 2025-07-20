@@ -1,93 +1,87 @@
 {
-  "name": "termx",
-  "displayName": "TermX",
-  "description": "Premium one‑keystroke terminal shortcuts—no palettes, instant feedback, separate cookbook view.",
+  "name": "termino",
+  "displayName": "Termino",
+  "description": "One keystroke terminal shortcuts no palettes, instant feedback, separate cookbook view.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.102.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "main": "./extension.js",
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "TermX Shortcuts",
+      "title": "Termino",
       "properties": {
-        "termx.shortcuts": {
+        "termino.shortcutsPath": {
+          "type": "string",
+          "default": ".vscode/termino.shortcuts.json",
+          "description": "Filesystem path (relative to workspace) for user-defined Termino shortcuts JSON."
+        },
+        "termino.shortcuts": {
           "type": "object",
-          "description": "Single‑letter → shell command map",
+          "description": "Default shortcut mappings. These are overridden by shortcuts in your user file.",
+          "default": {
+    "a": { "cmd": "dir",                           "desc": "List files & folders (Windows)." },
+    "b": { "cmd": "cls",                           "desc": "Clear the console (Windows)." },
+    "c": { "cmd": "pwd",                           "desc": "Print current working directory." },
+    "d": { "cmd": "cd",                            "desc": "Change directory (to home if no args)." },
+    "e": { "cmd": "tree",                          "desc": "Show folder hierarchy (Windows)." },
 
-  "default": {
-    "a": { "cmd": "git add .",                              "desc": "Stage all changes." },
-    "b": { "cmd": "git branch",                             "desc": "List local branches." },
-    "c": { "cmd": "git commit -m \"\"",                      "desc": "Commit with message." },
-    "d": { "cmd": "git diff",                               "desc": "Show unstaged diffs." },
-    "g": { "cmd": "git log --oneline --graph",              "desc": "Compact commit graph." },
-    "l": { "cmd": "git pull",                               "desc": "Fetch and merge." },
-    "m": { "cmd": "git merge",                              "desc": "Merge a branch." },
-    "o": { "cmd": "git checkout ",                          "desc": "Switch branches." },
-    "p": { "cmd": "git push",                               "desc": "Push to remote." },
-    "K": { "cmd": "git stash",                              "desc": "Stash changes." },
-    "H": { "cmd": "git cherry-pick ",                       "desc": "Apply a commit." },
-    "E": { "cmd": "git rebase -i HEAD~5",                   "desc": "Interactive rebase." },
-    "f": { "cmd": "ls -la",                                 "desc": "List all files." },
-    "z": { "cmd": "cd ..",                                  "desc": "Go to parent directory." },
-    "x": { "cmd": "clear",                                  "desc": "Clear the terminal." },
-    "e": { "cmd": "exit",                                   "desc": "Exit the shell." },
-    "k": { "cmd": "mkdir ",                                 "desc": "Create directory." },
-    "t": { "cmd": "touch ",                                 "desc": "Create empty file." },
-    "h": { "cmd": "",                                       "desc": "Show this cookbook." },
-    "w": { "cmd": "watch ",                                 "desc": "Run command repeatedly." },
-    "O": { "cmd": "htop",                                   "desc": "Interactive process viewer." },
-    "Q": { "cmd": "pkill -f ",                              "desc": "Kill process by name." },
-    "n": { "cmd": "npm install",                            "desc": "Install npm dependencies." },
-    "i": { "cmd": "npm run dev",                            "desc": "Run npm dev script." },
-    "T": { "cmd": "npm test",                               "desc": "Run npm tests." },
-    "R": { "cmd": "npm run build",                          "desc": "Run npm build script." },
-    "u": { "cmd": "npm update",                             "desc": "Update npm dependencies." },
-    "Y": { "cmd": "yarn install",                           "desc": "Install yarn dependencies." },
-    "D": { "cmd": "docker-compose up -d",                   "desc": "Start docker-compose." },
-    "W": { "cmd": "docker-compose down",                    "desc": "Stop & remove docker-compose." },
-    "B": { "cmd": "docker-compose build",                   "desc": "Build docker-compose services." },
-    "S": { "cmd": "docker ps -a",                           "desc": "List all docker containers." },
-    "L": { "cmd": "docker logs -f ",                        "desc": "Follow container logs." },
-    "X": { "cmd": "docker-compose stop",                    "desc": "Stop docker-compose services." },
-    "A": { "cmd": "docker images",                          "desc": "List docker images." },
-    "P": { "cmd": "python manage.py runserver",             "desc": "Run Django server." },
-    "M": { "cmd": "python manage.py makemigrations",        "desc": "Create Django migrations." },
-    "G": { "cmd": "python manage.py migrate",               "desc": "Apply Django migrations." },
-    "I": { "cmd": "pip install -r requirements.txt",        "desc": "Install pip packages." },
-    "F": { "cmd": "flutter run",                            "desc": "Run Flutter app." },
-    "U": { "cmd": "flutter pub get",                        "desc": "Get Flutter packages." },
-    "C": { "cmd": "flutter clean",                          "desc": "Clean Flutter project." },
-    "J": { "cmd": "mvn clean install",                      "desc": "Build with Maven." },
-    "V": { "cmd": "gradle build",                           "desc": "Build with Gradle." },
-    "N": { "cmd": "ng serve",                               "desc": "Run Angular server." },
-    "q": { "cmd": "make",                                   "desc": "Execute Makefile." },
-    "1": { "cmd": "kubectl get pods --all-namespaces",      "desc": "k8s: List all pods." },
-    "2": { "cmd": "kubectl get deployments --all-namespaces", "desc": "k8s: List all deployments." },
-    "3": { "cmd": "kubectl logs -f ",                       "desc": "k8s: Follow pod logs." },
-    "4": { "cmd": "kubectl describe ",                      "desc": "k8s: Describe resource." },
-    "5": { "cmd": "kubectl exec -it  -- /bin/sh",           "desc": "k8s: Shell into pod." },
-    "6": { "cmd": "terraform init",                         "desc": "Terraform: Initialize." },
-    "7": { "cmd": "terraform plan",                         "desc": "Terraform: Create plan." },
-    "8": { "cmd": "terraform apply --auto-approve",         "desc": "Terraform: Apply plan." },
-    "9": { "cmd": "terraform destroy --auto-approve",       "desc": "Terraform: Destroy." },
-    "0": { "cmd": "aws s3 ls",                              "desc": "AWS: List S3 buckets." },
-    "{": { "cmd": "go run .",                               "desc": "Go: Run package." },
-    "}": { "cmd": "go build .",                             "desc": "Go: Build package." },
-    "[": { "cmd": "cargo run",                              "desc": "Rust: Run package." },
-    "]": { "cmd": "cargo build",                            "desc": "Rust: Build package." }
+    "f": { "cmd": "flutter doctor",                "desc": "Verify Flutter setup health." },
+    "g": { "cmd": "flutter pub get",               "desc": "Fetch Flutter & Dart dependencies." },
+    "h": { "cmd": "flutter pub upgrade",           "desc": "Upgrade all packages to latest compatible." },
+    "i": { "cmd": "flutter run",                   "desc": "Build & launch app on connected device." },
+    "j": { "cmd": "flutter build apk",             "desc": "Produce Android APK build." },
+    "k": { "cmd": "dart analyze",                  "desc": "Statically analyze Dart code for issues." },
+    "l": { "cmd": "dart format .",                 "desc": "Auto-format all Dart files in project." },
+
+    "m": { "cmd": "git status",                    "desc": "Show Git repo current status." },
+    "n": { "cmd": "git add .",                     "desc": "Stage all modified & new files." },
+    "o": { "cmd": "git commit -m \"\"",            "desc": "Commit staged changes with message." },
+    "p": { "cmd": "git pull",                      "desc": "Fetch & merge upstream changes." },
+    "q": { "cmd": "git push",                      "desc": "Push local commits to remote." },
+    "r": { "cmd": "git log --oneline --graph",     "desc": "View compact commit history graph." },
+
+    "s": { "cmd": "firebase login",                "desc": "Authenticate Firebase CLI." },
+    "t": { "cmd": "firebase emulators:start",      "desc": "Run local Firebase emulators." },
+    "u": { "cmd": "firebase deploy",               "desc": "Deploy to Firebase (hosting, functions, etc.)." },
+
+    "v": { "cmd": "ipconfig",                      "desc": "Show network interfaces & IPs (Windows)." },
+    "w": { "cmd": "ping -n 4 google.com",          "desc": "Ping Google 4 times (Windows syntax)." },
+    "x": { "cmd": "tracert google.com",            "desc": "Trace route to Google (Windows)." },
+    "y": { "cmd": "netstat -ano",                  "desc": "List all network connections with PIDs." },
+    "z": { "cmd": "tasklist",                      "desc": "List running processes & their PIDs (Windows)." }
   }
-
-
         }
       }
+    },
+    "commands": [
+      {
+        "command": "termino.editShortcuts",
+        "title": "Termino: Edit Shortcuts File"
+      },
+      {
+        "command": "termino.reloadShortcuts",
+        "title": "Termino: Reload Shortcuts"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "termino.editShortcuts",
+          "when": "true"
+        },
+        {
+          "command": "termino.reloadShortcuts",
+          "when": "true"
+        }
+      ]
     }
   },
   "scripts": {
@@ -97,7 +91,7 @@
     "watch": "tsc -w -p ./"
   },
   "devDependencies": {
-    "@types/vscode": "^1.102.0",
+    "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
     "eslint": "^9.25.1",

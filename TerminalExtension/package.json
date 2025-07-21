@@ -1,7 +1,7 @@
 {
   "name": "termino",
   "displayName": "Termino",
-  "description": "One keystroke terminal shortcuts no palettes, instant feedback, separate cookbook view.",
+  "description": "One keystroke terminal shortcuts, no palettes, instant feedback, separate cookbook view.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
@@ -10,7 +10,11 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onView:termino.launcherView",
+    "onCommand:termino.editShortcuts",
+    "onCommand:termino.reloadShortcuts",
+    "onCommand:termino.quickLaunch"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -27,37 +31,33 @@
           "type": "object",
           "description": "Default shortcut mappings. These are overridden by shortcuts in your user file.",
           "default": {
-    "a": { "cmd": "dir",                           "desc": "List files & folders (Windows)." },
-    "b": { "cmd": "cls",                           "desc": "Clear the console (Windows)." },
-    "c": { "cmd": "pwd",                           "desc": "Print current working directory." },
-    "d": { "cmd": "cd",                            "desc": "Change directory (to home if no args)." },
-    "e": { "cmd": "tree",                          "desc": "Show folder hierarchy (Windows)." },
-
-    "f": { "cmd": "flutter doctor",                "desc": "Verify Flutter setup health." },
-    "g": { "cmd": "flutter pub get",               "desc": "Fetch Flutter & Dart dependencies." },
-    "h": { "cmd": "flutter pub upgrade",           "desc": "Upgrade all packages to latest compatible." },
-    "i": { "cmd": "flutter run",                   "desc": "Build & launch app on connected device." },
-    "j": { "cmd": "flutter build apk",             "desc": "Produce Android APK build." },
-    "k": { "cmd": "dart analyze",                  "desc": "Statically analyze Dart code for issues." },
-    "l": { "cmd": "dart format .",                 "desc": "Auto-format all Dart files in project." },
-
-    "m": { "cmd": "git status",                    "desc": "Show Git repo current status." },
-    "n": { "cmd": "git add .",                     "desc": "Stage all modified & new files." },
-    "o": { "cmd": "git commit -m \"\"",            "desc": "Commit staged changes with message." },
-    "p": { "cmd": "git pull",                      "desc": "Fetch & merge upstream changes." },
-    "q": { "cmd": "git push",                      "desc": "Push local commits to remote." },
-    "r": { "cmd": "git log --oneline --graph",     "desc": "View compact commit history graph." },
-
-    "s": { "cmd": "firebase login",                "desc": "Authenticate Firebase CLI." },
-    "t": { "cmd": "firebase emulators:start",      "desc": "Run local Firebase emulators." },
-    "u": { "cmd": "firebase deploy",               "desc": "Deploy to Firebase (hosting, functions, etc.)." },
-
-    "v": { "cmd": "ipconfig",                      "desc": "Show network interfaces & IPs (Windows)." },
-    "w": { "cmd": "ping -n 4 google.com",          "desc": "Ping Google 4 times (Windows syntax)." },
-    "x": { "cmd": "tracert google.com",            "desc": "Trace route to Google (Windows)." },
-    "y": { "cmd": "netstat -ano",                  "desc": "List all network connections with PIDs." },
-    "z": { "cmd": "tasklist",                      "desc": "List running processes & their PIDs (Windows)." }
-  }
+            "a": { "cmd": "dir", "desc": "List files & folders (Windows)." },
+            "b": { "cmd": "cls", "desc": "Clear the console (Windows)." },
+            "c": { "cmd": "pwd", "desc": "Print current working directory." },
+            "d": { "cmd": "cd..", "desc": "Change directory (to home if no args)." },
+            "e": { "cmd": "tree", "desc": "Show folder hierarchy (Windows)." },
+            "f": { "cmd": "flutter doctor", "desc": "Verify Flutter setup health." },
+            "g": { "cmd": "flutter pub get", "desc": "Fetch Flutter & Dart dependencies." },
+            "h": { "cmd": "flutter pub upgrade", "desc": "Upgrade all packages to latest compatible." },
+            "i": { "cmd": "flutter run", "desc": "Build & launch app on connected device." },
+            "j": { "cmd": "flutter build apk", "desc": "Produce Android APK build." },
+            "k": { "cmd": "dart analyze", "desc": "Statically analyze Dart code for issues." },
+            "l": { "cmd": "dart format .", "desc": "Auto-format all Dart files in project." },
+            "m": { "cmd": "git status", "desc": "Show Git repo current status." },
+            "n": { "cmd": "git add .", "desc": "Stage all modified & new files." },
+            "o": { "cmd": "git commit -m \"\"", "desc": "Commit staged changes with message." },
+            "p": { "cmd": "git pull", "desc": "Fetch & merge upstream changes." },
+            "q": { "cmd": "git push", "desc": "Push local commits to remote." },
+            "r": { "cmd": "git log --oneline --graph", "desc": "View compact commit history graph." },
+            "s": { "cmd": "firebase login", "desc": "Authenticate Firebase CLI." },
+            "t": { "cmd": "firebase emulators:start", "desc": "Run local Firebase emulators." },
+            "u": { "cmd": "firebase deploy", "desc": "Deploy to Firebase (hosting, functions, etc.)." },
+            "v": { "cmd": "ipconfig", "desc": "Show network interfaces & IPs (Windows)." },
+            "w": { "cmd": "ping -n 4 google.com", "desc": "Ping Google 4 times (Windows syntax)." },
+            "x": { "cmd": "tracert google.com", "desc": "Trace route to Google (Windows)." },
+            "y": { "cmd": "netstat -ano", "desc": "List all network connections with PIDs." },
+            "z": { "cmd": "tasklist", "desc": "List running processes & their PIDs (Windows)." }
+          }
         }
       }
     },
@@ -69,18 +69,39 @@
       {
         "command": "termino.reloadShortcuts",
         "title": "Termino: Reload Shortcuts"
+      },
+      {
+        "command": "termino.quickLaunch",
+        "title": "Termino: Quick Launch"
+      },
+      {
+        "command": "workbench.view.extension.termino-launcher-view",
+        "title": "Termino: Toggle Launcher"
       }
     ],
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "termino",
+          "title": "Termino",
+          "icon": "resources/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "termino": [
+        {
+          "id": "termino.launcherView",
+          "name": "Launcher"
+        }
+      ]
+    },
     "menus": {
       "commandPalette": [
-        {
-          "command": "termino.editShortcuts",
-          "when": "true"
-        },
-        {
-          "command": "termino.reloadShortcuts",
-          "when": "true"
-        }
+        { "command": "termino.editShortcuts" },
+        { "command": "termino.reloadShortcuts" },
+        { "command": "termino.quickLaunch" },
+        { "command": "workbench.view.extension.termino-launcher-view", "when": "true" }
       ]
     }
   },

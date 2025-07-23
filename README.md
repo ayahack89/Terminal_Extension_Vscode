@@ -1,6 +1,6 @@
-# 🚀 Termino: Unleash Terminal Superpowers in VS Code – One Key, Infinite Speed!
+# 🚀 Termino: Unleash Terminal Superpowers in VS Code One Key, Infinite Speed!
 
-Hey developer! Tired of typing the same terminal commands over and over? `npm install`, `git status`, `docker compose up`... It gets old, fast. What if you could hit just **one key** and have that command run instantly?
+Hey developer! Tired of typing the same terminal commands over and over? `npm install`, `git status`, `docker compose up`... It's getting older. What if you could hit just **one key** and have that command run instantly?
 
 That’s exactly what **Termino** does. I built Termino to be your personal shortcut master for the VS Code terminal, so you can save keystrokes, brainpower, and time. Get ready to stop typing and start *flying* through your workflow!
 

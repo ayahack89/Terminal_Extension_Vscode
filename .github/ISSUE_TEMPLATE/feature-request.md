@@ -7,19 +7,36 @@ assignees: ayahack89
 
 ---
 
-**Is your feature request related to a problem, or do you want to add a new feature? Please describe.**
-If there's something in your workflow that feels clunky, repetitive, or could be smoother with Termino, let me know! I'm always curious to hear how people use terminal shortcuts and where things could improve.
-
-**Describe the solution you'd like**
-Got a cool idea in mind? Maybe a small tweak or a whole new way to make terminal life easier? Share it here no suggestion is too small.
-
-**Describe alternatives you've considered**
-If you've seen a similar feature elsewhere or thought of different approaches, feel free to drop that info too. It helps shape better decisions.
-
-**Additional context**
-Any screenshots, mockups, or random thoughts you want to toss in, go for it. Everything helps.
+## 🚩 Is your request a problem or a brand‑new feature?
+Please describe whether you’re encountering a friction point in your current workflow or if you have an entirely new idea in mind.  
+- **Problem**: What feels clunky, repetitive, or time‑consuming today?  
+- **Idea**: What would you like Termino to do that it can’t do yet?
 
 ---
 
-🚀 **Termino is open-source and evolving. If you’ve got an idea or want to optimise something, contribute! Don’t hesitate.**
-Let’s build something awesome, together.
+## 💡 Describe your proposed solution
+Tell us exactly what you’d like to see. Be as specific as possible:  
+- Which command(s) or workflow step(s) should change or be added?  
+- How would you invoke this new feature? (e.g., via a keyboard shortcut, a new command palette entry, a context menu item)  
+- What feedback or output would you expect?
+
+---
+
+## 🔀 Alternatives you’ve considered
+If you’ve seen something similar elsewhere or have tried a workaround, please share:  
+- Other extensions, shell scripts, or built‑in tools you considered  
+- Manual steps you currently perform instead  
+- Why those options aren’t ideal
+
+---
+
+## 📸 Additional context & examples
+Any extra details help us shape the best solution:  
+- Screenshots, GIFs, or mockups  
+- Sample command sequences  
+- Links to related discussions or docs
+
+---
+
+🚀 **Termino is open‑source and driven by your feedback.**  
+If you have any questions or want to chat through your idea, drop a comment here or open a draft pull request. Let’s build something awesome together! 🌟

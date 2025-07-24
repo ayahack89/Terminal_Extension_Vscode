@@ -3,10 +3,21 @@
   "displayName": "Termino",
   "description": "One-keystroke terminal shortcuts, instant feedback, and a fully polished cookbook view.",
   "version": "0.1.0",
+  "publisher": "ayanabhachatterjee",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": ["Other"],
+  "icon": "resources/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayahack89/VsCodeExtension_Termino.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ayahack89/VsCodeExtension_Termino/issues"
+  },
+  "homepage": "https://github.com/ayahack89/VsCodeExtension_Termino#readme",
+  "license": "MIT",
   "activationEvents": [
     "onStartupFinished",
     "onView:termino.launcherView",

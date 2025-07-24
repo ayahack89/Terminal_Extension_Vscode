@@ -1,7 +1,7 @@
 ## 👋 Hey there! 
 **Thank you for showing interest in contributing to *Termino*.**
 
-Hey there! Thanks for showing interest in contributing to Termino, whether you're fixing a bug, suggesting a new feature, refining the UI, or just tidying up the docs, your help means a lot.
+Thanks for showing interest in contributing to Termino, whether you're fixing a bug, suggesting a new feature, refining the UI, or just tidying up the docs, your help means a lot.
 
 ### 🔧 Getting Started
 

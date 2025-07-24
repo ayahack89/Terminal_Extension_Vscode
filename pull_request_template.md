@@ -1,9 +1,7 @@
-# 🚀 Pull Request – Contributing to Termino
+# 🔁 Pull Request 
 
 Thank you for taking the time to improve **Termino**!  
-Please complete the details below to ensure a smooth review process.
-
----
+Please make sure the details below to ensure a smooth review process.
 
 ## 📌 Overview
 
@@ -12,11 +10,11 @@ Please complete the details below to ensure a smooth review process.
 
 _Select the type that best describes your PR:_
 
-- [ ] ✨ New Feature  
-- [ ] 🐛 Bug Fix  
-- [ ] 📝 Documentation Update  
-- [ ] ♻️ Code Refactor / Cleanup  
-- [ ] 🔧 Other (please specify below)
+- ✨ New Feature  
+- 🐛 Bug Fix  
+- 📝 Documentation Update  
+- ♻️ Code Refactor / Cleanup  
+- 🔧 Other (please specify below)
 
 </details>
 
@@ -30,21 +28,19 @@ Implements support for editing custom terminal shortcuts directly within the Coo
 
 </details>
 
----
 
 ## ✅ Pre-Submission Checklist
 
-Please go through each item and check them off as appropriate:
+Please go through each item and make sure these are all should be appropriate:
 
-- [ ] The code does **not break** existing core features  
-- [ ] I’ve tested the extension using the **VS Code Extension Host (`F5`)**  
-- [ ] Code is **well-structured and commented** where needed  
-- [ ] Commit messages are **clear and descriptive**  
-- [ ] Linked to **relevant issues** or discussions (if applicable)  
+- The code does **not break** existing core features  
+- I’ve tested the extension using the **VS Code Extension Host (`F5`)**  
+- Code is **well-structured and commented** where needed  
+- Commit messages are **clear and descriptive**  
+- Linked to **relevant issues** or discussions (if applicable)  
 
----
 
 Thanks again for contributing to Termino 💙  
-Let’s make terminal productivity better — one shortcut at a time.  
+Let’s make terminal productivity better, one shortcut at a time.  
 
 — *Ayanabha Chatterjee*

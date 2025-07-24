@@ -1,7 +1,7 @@
 {
   "name": "termino",
   "displayName": "Termino",
-  "description": "One-keystroke terminal shortcuts, instant feedback, and a fully polished cookbook view.",
+  "description": "Termino is a lightweight VS Code extension that lets you run your favorite terminal commands with a single keystroke. Customize shortcuts, speed up your workflow, and stop retyping the same commands again and again.",
   "version": "0.1.1",
   "publisher": "ayanabhachatterjee",
   "engines": {
@@ -13,12 +13,12 @@
   "icon": "resources/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ayahack89/VsCodeExtension_Termino.git"
+    "url": "https://github.com/ayahack89/termino.git"
   },
   "bugs": {
-    "url": "https://github.com/ayahack89/VsCodeExtension_Termino/issues"
+    "url": "https://github.com/ayahack89/termino/issues"
   },
-  "homepage": "https://github.com/ayahack89/VsCodeExtension_Termino#readme",
+  "homepage": "https://github.com/ayahack89/termino#readme",
   "license": "MIT",
   "activationEvents": [
     "onStartupFinished",

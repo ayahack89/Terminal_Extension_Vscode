@@ -1,34 +1,50 @@
-# 🚀 Pull Request: Termino Contribution
+# 🚀 Pull Request – Contributing to Termino
 
-Thanks for taking the time to improve Termino!  
-Please fill out the checklist below to help me review and merge your PR smoothly.
-
----
-
-## 📋 What does this PR do?
-
-<!-- Briefly describe the changes you're making -->
-- [ ] Feature
-- [ ] Bug fix
-- [ ] Documentation
-- [ ] Refactor / Cleanup
-- [ ] Other (please explain):
-
-**Summary:**  
-<!-- Example: Adds support for shortcut editing in the Cookbook panel -->
+Thank you for taking the time to improve **Termino**!  
+Please complete the details below to ensure a smooth review process.
 
 ---
 
-## ✅ Checklist before submitting
+## 📌 Overview
 
-Please confirm the following:
+<details>
+<summary><strong>📄 Type of Change</strong></summary>
 
-- [ ] My code works as expected and doesn’t break core features
-- [ ] I’ve tested the extension using the VS Code Extension Host (`F5`)
-- [ ] I’ve added or updated comments and documentation where needed
-- [ ] My commit messages are clear and meaningful
-- [ ] I’ve linked any related issues (if applicable)
+_Select the type that best describes your PR:_
 
+- [ ] ✨ New Feature  
+- [ ] 🐛 Bug Fix  
+- [ ] 📝 Documentation Update  
+- [ ] ♻️ Code Refactor / Cleanup  
+- [ ] 🔧 Other (please specify below)
 
-Thanks again for your contribution! Let’s make terminal shortcuts smarter together 💙  
-— Ayanabha Chatterjee
+</details>
+
+<details>
+<summary><strong>🧠 Summary of the Change</strong></summary>
+
+<!-- Briefly explain what this PR does -->
+
+Example:  
+Implements support for editing custom terminal shortcuts directly within the Cookbook panel.
+
+</details>
+
+---
+
+## ✅ Pre-Submission Checklist
+
+Please go through each item and check them off as appropriate:
+
+- [ ] The code does **not break** existing core features  
+- [ ] I’ve tested the extension using the **VS Code Extension Host (`F5`)**  
+- [ ] Code is **well-structured and commented** where needed  
+- [ ] Commit messages are **clear and descriptive**  
+- [ ] Linked to **relevant issues** or discussions (if applicable)  
+
+---
+
+Thanks again for contributing to Termino 💙  
+Let’s make terminal productivity better — one shortcut at a time.  
+
+— *Ayanabha Chatterjee*

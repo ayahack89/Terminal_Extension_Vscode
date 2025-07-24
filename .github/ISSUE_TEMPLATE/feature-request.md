@@ -1,13 +1,13 @@
 ---
-name: Feature request
-about: "\U0001F4A1 Suggest an idea for Termino"
+name: feature request
+about: Suggest Something Cool
 title: " Got an idea to improve Termino? Suggest a feature.  "
 labels: enhancement
 assignees: ayahack89
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
+**Is your feature request related to a problem, or do you want to add a new feature? Please describe.**
 If there's something in your workflow that feels clunky, repetitive, or could be smoother with Termino, let me know! I'm always curious to hear how people use terminal shortcuts and where things could improve.
 
 **Describe the solution you'd like**

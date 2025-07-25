@@ -6,7 +6,6 @@ Welcome to **Termino**.
 
 Termino is a simple, powerful VS Code extension that maps your favorite commands to single keys. It's designed to get out of your way and let you focus on what matters. Stop typing, start launching.
 
------
 
 ## ✨ Why You'll Love Termino
 
@@ -20,7 +19,6 @@ Termino was built to eliminate the small, repetitive tasks that drain your energ
 
   - **🎉 100% Your Workflow:** Termino is unopinionated. You define the shortcuts. Whether you're a frontend guru, a backend master, or a DevOps champion, you can tailor it to fit your unique process perfectly.
 
------
 
 ## ⚙️ Installation
 
@@ -34,7 +32,6 @@ Getting started is as easy as installing any other extension.
 4.  Click **Install**.
 5.  Reload VS Code if prompted. That's it\!
 
------
 
 ## 🚦 How It Works
 
@@ -65,7 +62,6 @@ If you live in the Command Palette, we've got you covered.
 
 > **[See Quick Launch in action]**
 
------
 
 ### 📝 Effortless Shortcut Setup
 
@@ -112,7 +108,6 @@ Setting up your personal command shortcuts is a breeze.
       * Press `Ctrl+Shift+P` / `Cmd+Shift+P` and run `Termino: Reload Shortcuts`.
       * Your new commands are now live in the Launcher and Quick Launch\!
 
------
 
 ### 🛠️ Advanced: Custom Shortcut File Path
 
@@ -122,7 +117,6 @@ By default, Termino looks for `.vscode/termino-shortcuts.json`. If you want to u
 2.  Search for "Termino".
 3.  Find the `Termino: Shortcuts Path` setting and update it with your desired file path (e.g., `/Users/you/global-shortcuts.json` or `${workspaceFolder}/config/my-shortcuts.json`).
 
------
 
 ## 📘 The Cookbook: Your Command Cheat Sheet
 
@@ -135,7 +129,6 @@ Access it in two ways:
 
 > **[See the Cookbook in action]**
 
------
 
 ## ✅ Conclusion
 
@@ -143,7 +136,6 @@ Termino is more than just a utility; it's a way to build a faster, more fluid re
 
 **Unleash your terminal. Unleash your flow. Try Termino and code at the speed of thought\!**
 
------
 
 ## 🙌 Feedback & Contributions
 

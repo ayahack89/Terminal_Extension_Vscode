@@ -119,7 +119,7 @@ By default, Termino looks for `.vscode/termino-shortcuts.json`. If you want to u
 2.  Search for "Termino".
 3.  Find the `Termino: Shortcuts Path` setting and update it with your desired file path (e.g., `/Users/you/global-shortcuts.json` or `${workspaceFolder}/config/my-shortcuts.json`).
 
-![Demo](resources/frame5.gif)
+<!-- ![Demo](resources/frame5.gif) -->
 
 
 ## The Cookbook: Your Command Cheat Sheet

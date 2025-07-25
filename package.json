@@ -2,7 +2,7 @@
   "name": "termino",
   "displayName": "Termino",
   "description": "Termino is a lightweight VS Code extension that lets you run your favorite terminal commands with a single keystroke. Customize shortcuts, speed up your workflow, and stop retyping the same commands again and again.",
-  "version": "0.1.1",
+  "version": "1.0.1",
   "publisher": "ayanabhachatterjee",
   "engines": {
     "vscode": "^1.85.0"

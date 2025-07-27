@@ -1,25 +1,25 @@
-# 🔁 Pull Request 
+# Pull Request 
 
 Thank you for taking the time to improve **Termino**!  
 Please make sure the details below to ensure a smooth review process.
 
-## 📌 Overview
+## Overview
 
 <details>
-<summary><strong>📄 Type of Change</strong></summary>
+<summary><strong> Type of Change</strong></summary>
 
 _Select the type that best describes your PR:_
 
-- ✨ New Feature  
-- 🐛 Bug Fix  
-- 📝 Documentation Update  
-- ♻️ Code Refactor / Cleanup  
-- 🔧 Other (please specify below)
+- New Feature  
+- Bug Fix  
+- Documentation Update  
+- Code Refactor / Cleanup  
+- Other (please specify below)
 
 </details>
 
 <details>
-<summary><strong>🧠 Summary of the Change</strong></summary>
+<summary><strong> Summary of the Change</strong></summary>
 
 <!-- Briefly explain what this PR does -->
 
@@ -29,7 +29,7 @@ Implements support for editing custom terminal shortcuts directly within the Coo
 </details>
 
 
-## ✅ Pre-Submission Checklist
+## Pre-Submission Checklist
 
 Please go through each item and make sure these are all should be appropriate:
 
@@ -40,7 +40,7 @@ Please go through each item and make sure these are all should be appropriate:
 - Linked to **relevant issues** or discussions (if applicable)  
 
 
-Thanks again for contributing to Termino 💙  
+Thanks again for contributing to Termino
 Let’s make terminal productivity better, one shortcut at a time.  
 
 — *Ayanabha Chatterjee*

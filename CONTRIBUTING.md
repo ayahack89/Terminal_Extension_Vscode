@@ -1,8 +1,8 @@
-## 👋 Hey there! 
+## Hey there! 
 
 **Thanks for showing interest in contributing to Termino, whether you're fixing a bug, suggesting a new feature, refining the UI, or just tidying up the docs, your help means a lot.**
 
-### 🔧 Getting Started
+### Getting Started
 
 To begin contributing:
 
@@ -17,7 +17,7 @@ Before submitting a pull request, please:
 * Follow consistent **code style**,
 * And include a **clear, concise description** of your update or fix.
 
-### 🤝 Let’s Build Together
+### Let’s Build Together
 
 We believe in building tools that are not just functional, but also thoughtful. With your support, *Termino* can continue to grow as a reliable, elegant companion for every developer who lives in the terminal.
 

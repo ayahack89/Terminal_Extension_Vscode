@@ -63,7 +63,7 @@
     "cmd": "git pull",
     "desc": "Pull upstream."
   },
-  "q": {
+  "8": {
     "cmd": "git push",
     "desc": "Push to remote."
   },
